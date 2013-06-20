@@ -11,30 +11,12 @@
 
 static NSString * cellIdentifier = @"CellIdentifier";
 
-@interface SVViewController (Private)
-- (CGFloat)_random;
+@interface SVViewController () <SVScrollingCellDelegate>
 @end
 
+CGFloat _random() { return (float)rand() / (float)RAND_MAX;}
+
 @implementation SVViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.collectionView.dataSource = self;
-    }
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    [self.collectionView registerClass:[SVScrollingCell class] forCellWithReuseIdentifier:cellIdentifier];
-    
-    self.scrollView.contentSize = CGSizeMake(2 * self.view.frame.size.width, self.view.frame.size.height);
-    
-}
 
 - (void)dealloc {
     [_collectionView release];
@@ -44,27 +26,45 @@ static NSString * cellIdentifier = @"CellIdentifier";
     [super dealloc];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.collectionView registerClass:[SVScrollingCell class] forCellWithReuseIdentifier:cellIdentifier];
+    self.scrollView.contentSize = CGSizeMake(2 * self.view.frame.size.width, self.view.frame.size.height);
+}
+
+#pragma mark - SVScrollingCellDelegate
+
+- (void)scrollingCellDidBeginPulling:(SVScrollingCell *)cell {
+    [self.scrollView setScrollEnabled:NO];
+    
+    self.otherView.backgroundColor = cell.color;
+}
+
+- (void)scrollingCell:(SVScrollingCell *)cell didChangePullOffset:(CGFloat)offset {
+    [self.scrollView setContentOffset:CGPointMake(offset, 0)];
+}
+
+- (void)scrollingCellDidEndPulling:(SVScrollingCell *)cell {
+    [self.scrollView setScrollEnabled:YES];
+}
+
+
+#pragma mark - UICollectionViewDatasource methods
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 100;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SVScrollingCell * cell = (SVScrollingCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    cell.delegate = self; 
     
-    CGFloat red = [self _random];
-    CGFloat green = [self _random];
-    CGFloat blue = [self _random];
+    CGFloat red = _random();
+    CGFloat green = _random();
+    CGFloat blue = _random();
     cell.color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
     
     return cell;
-}
-
-@end
-
-@implementation SVViewController (Private)
-
-- (CGFloat)_random {
-    return (float)rand() / (float)RAND_MAX;
 }
 
 @end
