@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4919B3B717739C5100E13694 /* SVSpringyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919B3B617739C5000E13694 /* SVSpringyFlowLayout.m */; };
 		497F9368177371D6005B8A3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497F9367177371D6005B8A3C /* UIKit.framework */; };
 		497F936A177371D6005B8A3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497F9369177371D6005B8A3C /* Foundation.framework */; };
 		497F936C177371D6005B8A3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497F936B177371D6005B8A3C /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4919B3B517739C5000E13694 /* SVSpringyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSpringyFlowLayout.h; sourceTree = "<group>"; };
+		4919B3B617739C5000E13694 /* SVSpringyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSpringyFlowLayout.m; sourceTree = "<group>"; };
 		497F9364177371D6005B8A3C /* iOS7ScrollViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS7ScrollViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497F9367177371D6005B8A3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		497F9369177371D6005B8A3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +97,8 @@
 				497F9389177372A1005B8A3C /* SVScrollingCell.h */,
 				497F938A177372A1005B8A3C /* SVScrollingCell.m */,
 				497F936E177371D6005B8A3C /* Supporting Files */,
+				4919B3B517739C5000E13694 /* SVSpringyFlowLayout.h */,
+				4919B3B617739C5000E13694 /* SVSpringyFlowLayout.m */,
 			);
 			path = iOS7ScrollViews;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				497F9378177371D6005B8A3C /* SVAppDelegate.m in Sources */,
 				497F93871773723D005B8A3C /* SVViewController.m in Sources */,
 				497F938B177372A1005B8A3C /* SVScrollingCell.m in Sources */,
+				4919B3B717739C5100E13694 /* SVSpringyFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +266,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS7ScrollViews/iOS7ScrollViews-Prefix.pch";
 				INFOPLIST_FILE = "iOS7ScrollViews/iOS7ScrollViews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,6 +278,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS7ScrollViews/iOS7ScrollViews-Prefix.pch";
 				INFOPLIST_FILE = "iOS7ScrollViews/iOS7ScrollViews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -295,6 +303,7 @@
 				497F9383177371D6005B8A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
