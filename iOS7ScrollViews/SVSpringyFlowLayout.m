@@ -52,7 +52,12 @@
         
         UICollectionViewLayoutAttributes * item = [spring.items firstObject];
         CGPoint center = item.center;
-        center.y += MIN(scrollDelta, scrollDelta * scrollResistance);
+        
+        /* Original Code from Apple in WWDC video */
+//        center.y += MIN(scrollDelta, scrollDelta * scrollResistance);
+        
+        /* Correction */
+        center.y += MIN(fabs(scrollDelta), fabs(scrollDelta * scrollResistance)) * scrollDelta / fabs(scrollDelta);
         item.center = center;
         
         [_dynamicAnimator updateItemFromCurrentState:item];
