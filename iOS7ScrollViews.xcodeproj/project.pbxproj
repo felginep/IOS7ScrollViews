@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046DAB2517D57C9700A079C8 /* SVSpingyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046DAB2417D57C9700A079C8 /* SVSpingyFlowLayout.m */; };
 		497F9368177371D6005B8A3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497F9367177371D6005B8A3C /* UIKit.framework */; };
 		497F936A177371D6005B8A3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497F9369177371D6005B8A3C /* Foundation.framework */; };
 		497F936C177371D6005B8A3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497F936B177371D6005B8A3C /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046DAB2317D57C9700A079C8 /* SVSpingyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSpingyFlowLayout.h; sourceTree = "<group>"; };
+		046DAB2417D57C9700A079C8 /* SVSpingyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSpingyFlowLayout.m; sourceTree = "<group>"; };
 		497F9364177371D6005B8A3C /* iOS7ScrollViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS7ScrollViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497F9367177371D6005B8A3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		497F9369177371D6005B8A3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,8 @@
 				497F9377177371D6005B8A3C /* SVAppDelegate.m */,
 				497F93841773723D005B8A3C /* SVViewController.h */,
 				497F93851773723D005B8A3C /* SVViewController.m */,
+				046DAB2317D57C9700A079C8 /* SVSpingyFlowLayout.h */,
+				046DAB2417D57C9700A079C8 /* SVSpingyFlowLayout.m */,
 				497F93861773723D005B8A3C /* SVViewController.xib */,
 				497F9389177372A1005B8A3C /* SVScrollingCell.h */,
 				497F938A177372A1005B8A3C /* SVScrollingCell.m */,
@@ -181,6 +186,7 @@
 			files = (
 				497F9374177371D6005B8A3C /* main.m in Sources */,
 				497F9378177371D6005B8A3C /* SVAppDelegate.m in Sources */,
+				046DAB2517D57C9700A079C8 /* SVSpingyFlowLayout.m in Sources */,
 				497F93871773723D005B8A3C /* SVViewController.m in Sources */,
 				497F938B177372A1005B8A3C /* SVScrollingCell.m in Sources */,
 			);
@@ -295,6 +301,7 @@
 				497F9383177371D6005B8A3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
